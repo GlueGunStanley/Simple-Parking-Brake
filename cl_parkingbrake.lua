@@ -28,6 +28,7 @@ Citizen.CreateThread(function()
         if IsControlJustReleased(0, 76) then
             engaged = not engaged
             engVeh  = GetVehiclePedIsIn(ped, false)
+            TriggerServerEvent("Super:PBrake:SetPB", engaged)
         end
     end
 end)
