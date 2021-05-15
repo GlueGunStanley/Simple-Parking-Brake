@@ -1,5 +1,4 @@
 local engaged = false
-local firstTime = true
 
 
 Citizen.CreateThread(function()
@@ -9,8 +8,6 @@ Citizen.CreateThread(function()
 
         if IsControlJustReleased(0, 76) then
             engaged = not engaged
-            SetVehicleHandbrake(veh, engaged)
-            -- firstTime = true
         end
     end
 end)
