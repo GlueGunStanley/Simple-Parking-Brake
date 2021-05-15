@@ -5,10 +5,14 @@ games {'gta5'}
 title 'Parking Brake'
 description 'A parking brake for all your cars!'
 author 'Superzorik'
-version 'v0.0.1 INDEV' --This is required for the version checker, DO NOT change or remove
+version 'v0.1.0 ALPHA' --This is required for the version checker, DO NOT change or remove
 
 lua54 "yes"
 
 client_scripts {
     'cl_parkingbrake.lua'
+}
+
+server_scripts {
+    'sv_parkingbrake.lua'
 }
