@@ -14,6 +14,12 @@ function drawTxt(x,y ,width,height,scale, text, r,g,b,a)
     DrawText(x - width/2, y - height/2 + 0.005)
 end
 
+RegisterNetEvent("Super:PBrake:GetPB")
+AddEventHandler("Super:PBrake:GetPB", function(eng)
+    engaged = eng
+    print("Get PB", engaged)
+end)
+
 function dispPark(eng)
     if eng and GetVehiclePedIsIn(ped, false) == engVeh then
         drawTxt(0.580, 1.240, 1.0, 1.0, 0.45, "(PARK)", 255, 0, 0, 200)
@@ -39,7 +45,7 @@ Citizen.CreateThread(function()
     local oldEngaged = true
     while true do
         Wait(0)
-        if not engaged then SetVehicleWheelieState(veh, 65) end
+        --if not engaged then SetVehicleWheelieState(veh, 65) end
         dispPark(engaged)
         SetVehicleHandbrake(engVeh, engaged)
         SetVehicleBrake(engVeh, engaged)
