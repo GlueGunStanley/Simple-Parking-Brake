@@ -6,7 +6,7 @@ This is a simple resource to where cars now have parking brakes! This replaces t
 
 ## Installation
 
-Installation is pretty simple, just download the folder, slap it into your resources folder and type this into your server.cfg
+Installation is pretty simple, just [download](https://github.com/supazorik/ParkingBrake/releases/tag/v1.0.0) the folder, slap it into your resources folder and type this into your server.cfg
 
 ```
 start super_parkingbrake
