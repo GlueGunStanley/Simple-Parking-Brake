@@ -12,3 +12,6 @@ Installation is pretty simple, just download the folder, slap it into your resou
 start super_parkingbrake
 ```
 
+> Note:
+> Make sure you have baseevents started in your server.cfg `ensure baseevents`
+
