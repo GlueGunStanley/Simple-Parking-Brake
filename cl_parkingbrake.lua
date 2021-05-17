@@ -25,16 +25,18 @@ AddEventHandler("Super:PBrake:GetPB", function(eng)
     setPB(engaged)
 end)
 
+local function IsPedInACar(ped)
+    return not IsPedInAnyPlane(ped) and not IsPedInAnyHeli(ped) and not IsPedInAnyBoat(ped) and not IsPedInAnySub(ped) and IsPedInAnyVehicle(ped, false)
+end
+
 local function dispPark(eng)
     ped = PlayerPedId()
-    if eng and IsPedInAnyVehicle(ped, true) then
+    if eng and IsPedInACar(ped) then
         drawTxt(_SUPERPB.config.park.x, _SUPERPB.config.park.y, 1.0, 1.0, 0.45, "(PARK)", 255, 0, 0, 200)
     end
 end
 
-local function IsPedInACar(ped)
-    return not IsPedInAnyPlane(ped) and not IsPedInAnyHeli(ped) and not IsPedInAnyBoat(ped) and not IsPedInAnySub(ped) and IsPedInAnyVehicle(ped, false)
-end
+
 
 Citizen.CreateThread(function()
     while true do
