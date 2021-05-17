@@ -29,7 +29,7 @@ end)
 local function dispPark(eng)
     ped = PlayerPedId()
     if eng and IsPedInAnyVehicle(ped, true) then
-        drawTxt(0.580, 1.240, 1.0, 1.0, 0.45, "(PARK)", 255, 0, 0, 200)
+        drawTxt(_SUPERPB.config.park.x, _SUPERPB.config.park.y, 1.0, 1.0, 0.45, "(PARK)", 255, 0, 0, 200)
     end
 end
 
@@ -37,9 +37,9 @@ Citizen.CreateThread(function()
     while true do
         Wait(0)
         local ped = PlayerPedId()
-        DisableControlAction(0, 76)
+        DisableControlAction(0, _SUPERPB.config.key)
         dispPark(engaged)
-        if IsControlJustReleased(0, 76) or IsDisabledControlJustPressed(0, 76) then
+        if IsControlJustReleased(0, _SUPERPB.config.key) or IsDisabledControlJustPressed(0, _SUPERPB.config.key) then
             engaged = not engaged
             engVeh  = GetVehiclePedIsIn(ped, false)
             setPB(engaged)
@@ -47,18 +47,3 @@ Citizen.CreateThread(function()
         end
     end
 end)
-
-
-
---[[
-Citizen.CreateThread(function()
-    local oldEngaged = true
-    while true do
-        ped, veh = PlayerPedId(), GetVehiclePedIsIn(ped, false)       
-        Wait(5)
-        dispPark(engaged)
-        SetVehicleHandbrake(veh, engaged)
-        SetVehicleBrake(veh, engaged)
-        
-    end
-end)]]
