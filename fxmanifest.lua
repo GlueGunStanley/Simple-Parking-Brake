@@ -5,7 +5,7 @@ games {'gta5'}
 title 'Parking Brake'
 description 'A parking brake for all your cars!'
 author 'Superzorik'
-version 'v0.1.0 ALPHA' --This is required for the version checker, DO NOT change or remove
+version 'v1.0.0 RELEASE' --This is required for the version checker, DO NOT change or remove
 
 lua54 "yes"
 
