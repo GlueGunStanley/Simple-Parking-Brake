@@ -9,7 +9,7 @@ This is a simple resource for [FiveM](https://fivem.net) to where cars now have 
 Installation is pretty simple, just [download](https://github.com/supazorik/ParkingBrake/releases/tag/v1.0.0) the folder, slap it into your resources folder and type this into your server.cfg
 
 ```
-start super_parkingbrake
+start ParkingBrake-1.0.0
 ```
 
 > Note:
