@@ -19,6 +19,11 @@ AddEventHandler("Super:PBrake:GetPB", function()
 
 end)
 
+RegisterNetEvent("baseevents:leftVehicle")
+AddEventHandler("baseevents:leftVehicle", function(curVeh, seat, name)
+    TriggerClientEvent("Super:PBrake:GetPB", source, false)
+end)
+
 RegisterNetEvent("baseevents:enteredVehicle")
 AddEventHandler("baseevents:enteredVehicle", function(veh, seat, name)
     vehID = NetworkGetNetworkIdFromEntity(GetVehiclePedIsIn(GetPlayerPed(source), false))

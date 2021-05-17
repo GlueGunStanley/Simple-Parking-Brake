@@ -32,13 +32,17 @@ local function dispPark(eng)
     end
 end
 
+local function IsPedInACar(ped)
+    return not IsPedInAnyPlane(ped) and not IsPedInAnyHeli(ped) and not IsPedInAnyBoat(ped) and not IsPedInAnySub(ped) and IsPedInAnyVehicle(ped, false)
+end
+
 Citizen.CreateThread(function()
     while true do
         Wait(0)
         local ped = PlayerPedId()
         DisableControlAction(0, _SUPERPB.config.key)
         dispPark(engaged)
-        if IsControlJustReleased(0, _SUPERPB.config.key) or IsDisabledControlJustPressed(0, _SUPERPB.config.key) and not IsPedInAnyPlane(ped) and not IsPedInAnyHeli(ped) and not IsPedInAnyBoat(ped) and not IsPedInAnySub(ped) then
+        if IsControlJustReleased(0, _SUPERPB.config.key) or IsDisabledControlJustPressed(0, _SUPERPB.config.key) and IsPedInACar(ped) then
             engaged = not engaged
             engVeh  = GetVehiclePedIsIn(ped, false)
             setPB(engaged)
