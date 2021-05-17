@@ -10,7 +10,7 @@ _SUPERPB.config = {} -- Don't touch this either
 --]]----------------------------------------
 
 
-_SUPERPB.config.park = {}
+_SUPERPB.config.park = {} -- Don't touch this
 _SUPERPB.config.park.x = 0.580
 _SUPERPB.config.park.y = 1.240
 

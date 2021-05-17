@@ -10,7 +10,8 @@ version 'v0.1.0 ALPHA' --This is required for the version checker, DO NOT change
 lua54 "yes"
 
 client_scripts {
-    'cl_parkingbrake.lua'
+    'cl_parkingbrake.lua',
+    'cl_config.lua'
 }
 
 server_scripts {
