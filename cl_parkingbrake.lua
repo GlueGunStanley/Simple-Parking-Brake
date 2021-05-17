@@ -3,7 +3,6 @@ engaged = false
 local function setPB(engaged)
     ped, veh = PlayerPedId(), GetVehiclePedIsIn(ped, false)
     SetVehicleHandbrake(veh, engaged)
-    SetVehicleBrake(veh, engaged)
 end
 
 function drawTxt(x,y ,width,height,scale, text, r,g,b,a)
@@ -39,7 +38,7 @@ Citizen.CreateThread(function()
         local ped = PlayerPedId()
         DisableControlAction(0, _SUPERPB.config.key)
         dispPark(engaged)
-        if IsControlJustReleased(0, _SUPERPB.config.key) or IsDisabledControlJustPressed(0, _SUPERPB.config.key) then
+        if IsControlJustReleased(0, _SUPERPB.config.key) or IsDisabledControlJustPressed(0, _SUPERPB.config.key) and not IsPedInAnyPlane(ped) and not IsPedInAnyHeli(ped) and not IsPedInAnyBoat(ped) and not IsPedInAnySub(ped) then
             engaged = not engaged
             engVeh  = GetVehiclePedIsIn(ped, false)
             setPB(engaged)
