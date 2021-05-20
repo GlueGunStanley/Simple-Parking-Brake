@@ -13,5 +13,5 @@ start ParkingBrake-1.0.0-RELEASE
 ```
 
 > Note:
-> Make sure you have baseevents started in your server.cfg `ensure baseevents`
+
 
