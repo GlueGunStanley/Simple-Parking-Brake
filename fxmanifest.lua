@@ -9,6 +9,8 @@ version 'v1.0.0 RELEASE' --This is required for the version checker, DO NOT chan
 
 lua54 "yes"
 
+dependency "baseevents"
+
 client_scripts {
     'cl_parkingbrake.lua',
     'cl_config.lua'
