@@ -12,6 +12,4 @@ Installation is pretty simple, just [download](https://github.com/supazorik/Park
 start ParkingBrake-1.0.0-RELEASE
 ```
 
-> Note:
-
 
