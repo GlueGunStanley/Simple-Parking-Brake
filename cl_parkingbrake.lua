@@ -46,7 +46,6 @@ Citizen.CreateThread(function()
         dispPark(engaged)
         if IsControlJustReleased(0, _SUPERPB.config.key) or IsDisabledControlJustPressed(0, _SUPERPB.config.key) and IsPedInACar(ped) then
             engaged = not engaged
-            engVeh  = GetVehiclePedIsIn(ped, false)
             setPB(engaged)
             TriggerServerEvent("Super:PBrake:SetPB", engaged)
         end
