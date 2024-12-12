@@ -1,13 +1,12 @@
-fx_version "cerulean"
-games {'gta5'}
+fx_version 'cerulean'
+game 'gta5'
+lua54 'yes'
 
 --DO NOT REMOVE THESE
 title 'Parking Brake'
 description 'A parking brake for all your cars!'
 author 'Superzorik'
 version 'v1.0.0 RELEASE' --This is required for the version checker, DO NOT change or remove
-
-lua54 "yes"
 
 dependency "baseevents"
 
