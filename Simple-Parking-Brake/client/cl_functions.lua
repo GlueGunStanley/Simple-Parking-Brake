@@ -3,8 +3,8 @@ function SetVehicleParkingBrake(bool)
     SetVehicleHandBrake(GetVehiclePedIsIn(PlayerPedId(), false), bool)
 end
 
-function ToggleIndicator()
-    if not Engaged then return end
+function ToggleIndicator(bool)
+    if not bool then return end
     if not IsPedInLandVehicle(PlayerPedId()) then return end
     RenderIndicator()
 end
@@ -34,4 +34,10 @@ end
 function GetNetIdFromVehicle(veh)
     if not veh then return end
     return VehToNet(veh)
+end
+
+function IsPedDriver(ped)
+    local veh = GetVehiclePedIsIn(ped, false)
+    local driver = GetPedInVehicleSeat(veh, -1)
+    if ped == driver then return true end
 end
