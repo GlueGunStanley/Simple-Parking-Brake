@@ -2,11 +2,11 @@ fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
 
---DO NOT REMOVE THESE
-title 'Parking Brake'
-description 'A parking brake for all your cars!'
-author 'Superzorik'
-version 'v1.0.0 RELEASE' --This is required for the version checker, DO NOT change or remove
+author 'Stanley Development Studios'
+description 'A simple parking brake script for FiveM'
+
+github 'https://github.com/GlueGunStanley/Simple-Parking-Brake'
+discord 'https://discord.com/invite/uCKZJed3Gq'
 
 dependency "baseevents"
 
