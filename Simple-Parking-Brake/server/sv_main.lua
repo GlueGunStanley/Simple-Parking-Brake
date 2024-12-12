@@ -1,7 +1,3 @@
---[[
-    Use for networking which cars have the PB on for other players.
-]]
-
 local parkedVehs = {}
 
 RegisterNetEvent("Super:PBrake:SetPB")
