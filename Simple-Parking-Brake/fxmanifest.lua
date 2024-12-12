@@ -12,10 +12,10 @@ lua54 "yes"
 dependency "baseevents"
 
 client_scripts {
-    'cl_parkingbrake.lua',
-    'cl_config.lua'
+    'config.lua',
+    'client/cl_main.lua'
 }
 
 server_scripts {
-    'sv_parkingbrake.lua'
+    'server/sv_main.lua'
 }
