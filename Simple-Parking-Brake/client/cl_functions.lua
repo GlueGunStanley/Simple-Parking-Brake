@@ -33,7 +33,7 @@ end
 
 function GetNetIdFromVehicle(veh)
     if not veh then return end
-    return VehToNet(veh)
+    return VehToNet(veh) or print("NETWORK ID NOT FOUND.")
 end
 
 function IsPedDriver(ped)
